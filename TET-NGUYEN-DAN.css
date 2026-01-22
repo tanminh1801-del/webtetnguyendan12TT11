@@ -279,6 +279,35 @@ content: "";
         padding: 10px 0;
         font-size: 15px;
     }
+    .navigation_menu {
+        padding: 4px 0;        /* làm thanh menu mỏng */
+        font-size: 14px;       /* chữ nhỏ gọn */
+    }
+
+    .dropdown a {
+        padding: 6px 0;        /* mỗi mục thấp lại */
+        font-size: 14px;
+    }
+
+    /* bỏ hẳn dấu | trên mobile */
+    .navigation_menu > a::after,
+    .navigation_menu > .dropdown::after {
+        display: none !important;
+    }
+
+    /* submenu cũng mỏng */
+    .submenu a {
+        padding: 6px 0;
+        font-size: 13px;
+    }
+
+    /* đẩy nội dung vừa đủ, không quá xa */
+    .content {
+        margin-top: 240px;
+    }
 }
+
+}
+
 
 
