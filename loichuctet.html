@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lời cảm ơn - Tết</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#FF3D3D; /* đỏ */
+      --bg2:#FFB84D; /* vàng */
+      --card:#fff8ec;
+      --accent:#B22222;
+    }
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+    body{
+      background: radial-gradient(ellipse at top left, rgba(255,255,255,0.06) 0%, transparent 20%), linear-gradient(135deg,var(--bg1),var(--bg2));
+      display:flex;align-items:center;justify-content:center;padding:32px;box-sizing:border-box;
+    }
+
+    .card{
+      width:min(820px,95%);
+      background:linear-gradient(180deg, rgba(255,250,244,0.9), rgba(255,245,235,0.95));
+      border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.18);padding:36px;position:relative;overflow:hidden;
+      display:flex;gap:24px;align-items:center;
+    }
+
+    /* lanterns decor */
+    .lantern{ z-index:0;
+      position:absolute;top:10px;right:28px;width:72px;height:110px;border-radius:14px;background:linear-gradient(180deg,#ffefc0,#ffd19a);box-shadow:inset 0 -8px 18px rgba(0,0,0,0.08);
+      transform-origin:top center;animation:swing 3.6s ease-in-out infinite;
+    }
+    .lantern::before{content:'';position:absolute;left:50%;top:-18px;width:4px;height:18px;background:rgba(0,0,0,0.15);transform:translateX(-50%);border-radius:2px}
+    .lantern::after{content:'';position:absolute;left:50%;bottom:-10px;width:28px;height:14px;background:linear-gradient(180deg,#ffb84d,#ff8c3d);border-radius:8px;transform:translateX(-50%)}
+    @keyframes swing{0%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}100%{transform:rotate(-6deg)}}
+
+    .text{ position:relative; z-index:2;
+      flex:1;
+    }
+    h1{font-family:'Playfair Display',serif;margin:0;color:var(--accent);font-size:2.2rem;letter-spacing:0.6px}
+    p.lead{margin:12px 0 0 0;font-size:1.05rem;color:#5b2a2a}
+
+    .signature{margin-top:18px;font-weight:600;color:#8b2a2a}
+
+    /* small fireworks */
+    .fireworks{ z-index:0; position:absolute;left:20px;bottom:14px;display:flex;gap:8px}{position:absolute;left:20px;bottom:14px;display:flex;gap:8px}
+    .burst{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.9);box-shadow:0 0 18px rgba(255,255,255,0.8);opacity:0.9;transform:scale(1);animation:pop 1.6s infinite}
+    .burst:nth-child(2){animation-delay:0.3s}
+    .burst:nth-child(3){animation-delay:0.6s}
+    @keyframes pop{0%{transform:scale(0.6);opacity:0.2}50%{transform:scale(1.8);opacity:1}100%{transform:scale(0.6);opacity:0.2}}
+
+    /* responsive */
+    @media (max-width:600px){
+      .card{padding:20px;border-radius:14px}
+      h1{font-size:1.5rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="article" aria-label="Lời cảm ơn dịp Tết">
+    <div class="lantern" aria-hidden="true"></div>
+
+    <div class="text">
+      <h1>Xin cảm ơn lời chúc Tết</h1>
+      <p class="lead">Cảm ơn bạn đã dành những lời chúc ấm áp trong dịp Tết. Chúc bạn một năm mới an khang, thịnh vượng, vạn sự như ý!</p>
+      <div class="signature">— Thân mến</div>
+    </div>
+
+    <div class="fireworks" aria-hidden="true">
+      <div class="burst"></div>
+      <div class="burst"></div>
+      <div class="burst"></div>
+    </div>
+  </div>
+</body>
+</html>
