@@ -191,4 +191,21 @@
     object-fit: contain;
     margin: 0 auto;    
 }
+@media (max-width: 768px) {
+
+    .floating-img-left,
+    .floating-img-right {
+        position: absolute;
+        max-width: 80px;
+        transform: scale(1) !important;
+        opacity: 0.4;
+        z-index: 1;
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+    }
+}
+
 
